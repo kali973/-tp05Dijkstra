@@ -50,7 +50,6 @@ class ShortestPath {
                     dist[v] = dist[u] + graph[u][v];
                 }
         }
-
         printSolution(dist, V);
     }
 }

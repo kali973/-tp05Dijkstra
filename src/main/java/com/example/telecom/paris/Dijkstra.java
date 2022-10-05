@@ -13,7 +13,7 @@ public class Dijkstra {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        // read the first two numbers in the file for the size of the array
+
         int numberRows = 7;
         int numberColumns = 7;
 
@@ -33,7 +33,7 @@ public class Dijkstra {
             }
             System.out.println();
         }
-        ShortestPath t = new ShortestPath();
+        DistanceMinPath t = new DistanceMinPath();
         t.dijkstra(graph, 0);
     }
 }

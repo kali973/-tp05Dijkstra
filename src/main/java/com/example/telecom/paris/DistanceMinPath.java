@@ -1,6 +1,6 @@
 package com.example.telecom.paris;
 
-class ShortestPath {
+class DistanceMinPath {
 
     static final int V = 7;
 
@@ -17,13 +17,11 @@ class ShortestPath {
     }
 
     void printSolution(int dist[], int n) {
-        System.out.println("Vertex   Distance from Source");
-        for (int i = 0; i < V; i++)
-            System.out.println(i + " tt " + dist[i]);
+        System.out.println("Vertex =>  Distance from Source : " + dist[n - 1]);
     }
 
     void dijkstra(int graph[][], int src) {
-        int dist[] = new int[V]; // The output array. dist[i] will hold
+        int dist[] = new int[V];
 
         Boolean sptSet[] = new Boolean[V];
 
@@ -32,9 +30,7 @@ class ShortestPath {
             sptSet[i] = false;
         }
 
-
         dist[src] = 0;
-
 
         for (int count = 0; count < V - 1; count++) {
 
